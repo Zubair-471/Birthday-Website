@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Surprise!</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
+</head>
+<body>
+  <!-- Floating Hearts -->
+  <div class="floating-hearts"></div>
+
+  <!-- Confetti -->
+  <div class="confetti"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="home.html" class="header-logo">🎂 Birthday Love 💖</a>
+      <nav class="header-nav">
+        <a href="home.html">Home</a>
+        <a href="letter.html">Letter</a>
+        <a href="memories.html">Memories</a>
+        <a href="surprise.html" class="active">Surprise</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Interactive Gift Box -->
+    <div class="gift-box"></div>
+
+    <!-- Surprise Content (Hidden initially) -->
+    <div class="surprise-content" style="display: none; max-width: 1200px; margin: 0 auto; padding: clamp(1rem, 3vw, 2rem);">
+      
+      <!-- Extended Welcome Message -->
+      <div class="glass-card" style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="color: var(--gold); margin-bottom: 1rem; font-size: clamp(1.5rem, 3.5vw, 2rem);">🎁 Welcome to Your Special Surprise! 🎁</h2>
+        <p style="font-size: clamp(0.9rem, 2.2vw, 1.1rem); line-height: 1.8; margin-bottom: 1rem;">
+          Today is all about you, my love! I've prepared something truly special - a collection of surprises, 
+          messages, and interactive experiences that I hope will make your birthday unforgettable. 
+          Each card below holds a different surprise, a different way to celebrate you and the beautiful 
+          person you are.
+        </p>
+        <p style="font-size: clamp(0.8rem, 2vw, 1rem); opacity: 0.9;">
+          Click on any card to discover what's inside. Let's make this day magical together! ✨
+        </p>
+      </div>
+      
+      <!-- Surprise Cards Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); margin-bottom: 3rem;">
+        
+        <!-- Birthday Letter Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showModal('💌 Birthday Letter 💌<br><br>A special message written just for you, filled with love and memories that make our journey together so beautiful.')">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">💌</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Birthday Letter</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">A heartfelt message from my heart to yours</p>
+        </div>
+
+        <!-- Interactive Fun Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="startQuiz()">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">🎮</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Interactive Fun</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Let's play a little game together</p>
+        </div>
+
+        <!-- Birthday Wishes Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showMessageCarousel()">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">🎂</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Birthday Wishes</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Special wishes just for you</p>
+        </div>
+
+        <!-- Countdown Timer Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showCountdown()">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">⏰</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Countdown Timer</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Time until your special moment</p>
+        </div>
+
+        <!-- Love Story Timeline Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showTimeline()">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">📖</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Love Story Timeline</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Our beautiful journey together</p>
+        </div>
+
+        <!-- Special Surprises Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showSpecialSurprises()">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">✨</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Special Surprises</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Little surprises throughout the day</p>
+        </div>
+
+        <!-- Interactive Cake Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showInteractiveCake()">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">🎂</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Interactive Cake</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Make a wish and blow out the candle</p>
+        </div>
+
+        <!-- Love Messages Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showLoveMessages()">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">💕</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Love Messages</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Messages that come from the heart</p>
+        </div>
+
+        <!-- Birthday Quiz Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="startBirthdayQuiz()">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">🧩</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Birthday Quiz</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Test your knowledge about love</p>
+        </div>
+
+        <!-- Special Video Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showVideoModal('Birthday Video', 'A special video message just for you on your birthday!', '🎥')">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">🎥</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Birthday Video</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">A special video message for you</p>
+        </div>
+
+        <!-- Memory Video Card -->
+        <div class="glass-card" style="text-align: center; cursor: pointer;" onclick="showVideoModal('Memory Video', 'Beautiful moments captured in video - our journey together.', '💕')">
+          <div style="font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 1rem;">💕</div>
+          <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Memory Video</h3>
+          <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Our beautiful moments together</p>
+        </div>
+      </div>
+
+      <!-- Quiz Container (Hidden initially) -->
+      <div class="quiz-container" style="display: none;"></div>
+
+      <!-- Message Carousel (Hidden initially) -->
+      <div class="message-carousel" style="display: none;">
+        <div class="message-slide active">
+          <h3>🎂 Happy Birthday! 🎂</h3>
+          <p>Today is all about celebrating you and the beautiful person you are. May your day be filled with joy, laughter, and all the love you deserve.</p>
+        </div>
+        <div class="message-slide">
+          <h3>💖 You Are Amazing 💖</h3>
+          <p>Your smile brightens every room, your laugh is contagious, and your heart is pure gold. You make the world a better place just by being you.</p>
+        </div>
+        <div class="message-slide">
+          <h3>✨ Special Day ✨</h3>
+          <p>This is your day to shine, to be celebrated, to feel loved and cherished. You deserve all the happiness in the world and more.</p>
+        </div>
+        <div class="message-slide">
+          <h3>🎁 Birthday Wishes 🎁</h3>
+          <p>May this year bring you endless joy, beautiful memories, and all the dreams your heart desires. You are loved beyond measure.</p>
+        </div>
+        <div class="message-slide">
+          <h3>💕 Forever Love 💕</h3>
+          <p>Every day with you is a gift, every moment precious. Thank you for being the most wonderful person in my life. I love you endlessly.</p>
+        </div>
+      </div>
+
+      <!-- Interactive Cake (Hidden initially) -->
+      <div class="interactive-cake" style="display: none; text-align: center;">
+        <div class="cake" style="margin: 2rem auto;"></div>
+        <button class="btn" onclick="blowOutCandle()" style="margin-top: 1rem;">Make a Wish and Blow! 🕯️</button>
+      </div>
+
+      <!-- Love Messages (Hidden initially) -->
+      <div class="love-messages" style="display: none;">
+        <div class="glass-card" style="text-align: center; max-width: 800px; margin: 0 auto;">
+          <h3>💕 Love Messages 💕</h3>
+          <div id="love-message-content" style="margin: 2rem 0; font-size: 1.1rem; line-height: 1.8;">
+            <p>You are my everything, my heart, my soul, my love. Every day with you is a blessing I cherish deeply.</p>
+          </div>
+          <button class="btn" onclick="showNextLoveMessage()">Next Message 💌</button>
+        </div>
+      </div>
+
+      <!-- Extended Birthday Wishes Section -->
+      <div class="glass-card" style="margin-top: 3rem; text-align: center;">
+        <h3 style="color: var(--gold); margin-bottom: 2rem;">🌟 Extended Birthday Wishes 🌟</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">💖</div>
+            <h4>Love & Joy</h4>
+            <p style="opacity: 0.9;">May your heart be filled with endless love and your days with pure joy. You deserve all the happiness in the world.</p>
+          </div>
+          
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">✨</div>
+            <h4>Magic & Dreams</h4>
+            <p style="opacity: 0.9;">May all your dreams come true and every wish be granted. You have the power to make magic happen.</p>
+          </div>
+          
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎉</div>
+            <h4>Celebration</h4>
+            <p style="opacity: 0.9;">Today we celebrate you - your kindness, your strength, your beautiful spirit. You are truly amazing.</p>
+          </div>
+          
+          <div style="text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌺</div>
+            <h4>Growth & Beauty</h4>
+            <p style="opacity: 0.9;">May you continue to grow and blossom like the most beautiful flower, spreading your light everywhere you go.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extended Personal Message -->
+      <div class="glass-card" style="margin-top: 3rem;">
+        <h3 style="color: var(--gold); text-align: center; margin-bottom: 2rem;">💌 A Special Message Just For You 💌</h3>
+        
+        <div style="line-height: 1.8; font-size: 1.1rem;">
+          <p style="margin-bottom: 1.5rem;">
+            My dearest love, as I write this message, my heart is overflowing with love for you. 
+            You are not just celebrating another year of life, but another year of being the incredible 
+            person you are - someone who brings light, love, and joy to everyone around you.
+          </p>
+          
+          <p style="margin-bottom: 1.5rem;">
+            Every moment with you is a gift I cherish deeply. Your smile brightens my darkest days, 
+            your laugh is the most beautiful music I've ever heard, and your love is the greatest 
+            blessing in my life. You make every day feel like a celebration just by being you.
+          </p>
+          
+          <p style="margin-bottom: 1.5rem;">
+            On this special day, I want you to know that you are loved beyond measure, cherished beyond words, 
+            and celebrated not just today, but every single day. You deserve all the happiness, all the love, 
+            and all the beautiful things this world has to offer.
+          </p>
+          
+          <p style="margin-bottom: 1.5rem;">
+            Thank you for being you - for your kindness, your strength, your beautiful heart, and for 
+            making my life so much more wonderful just by being in it. You are my everything, my heart, 
+            my soul, my love.
+          </p>
+          
+          <p style="text-align: center; font-weight: 600; color: var(--gold);">
+            Happy Birthday, my love! May this year be filled with endless joy, beautiful memories, 
+            and all the dreams your heart desires. I love you more than words can express! 💖
+          </p>
+        </div>
+      </div>
+
+      <!-- Extended Birthday Quotes -->
+      <div class="glass-card" style="margin-top: 3rem; text-align: center;">
+        <h3 style="color: var(--gold); margin-bottom: 2rem;">💫 Birthday Quotes to Inspire You 💫</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <div style="padding: 1.5rem; border-left: 3px solid var(--gold);">
+            <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 1rem;">
+              "The more you praise and celebrate your life, the more there is in life to celebrate."
+            </p>
+            <p style="opacity: 0.8;">- Oprah Winfrey</p>
+          </div>
+          
+          <div style="padding: 1.5rem; border-left: 3px solid var(--gold);">
+            <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 1rem;">
+              "Age is just a number, and mine is unlisted."
+            </p>
+            <p style="opacity: 0.8;">- Joan Rivers</p>
+          </div>
+          
+          <div style="padding: 1.5rem; border-left: 3px solid var(--gold);">
+            <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 1rem;">
+              "Every birthday is a gift. Every day is a gift."
+            </p>
+            <p style="opacity: 0.8;">- Aretha Franklin</p>
+          </div>
+          
+          <div style="padding: 1.5rem; border-left: 3px solid var(--gold);">
+            <p style="font-style: italic; font-size: 1.1rem; margin-bottom: 1rem;">
+              "The greatest gift is not found in a store or under a tree, but in the hearts of true friends."
+            </p>
+            <p style="opacity: 0.8;">- Cindy Lew</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Final Birthday Message -->
+      <div class="glass-card" style="margin-top: 3rem; text-align: center; background: linear-gradient(135deg, rgba(255, 107, 157, 0.2), rgba(196, 69, 105, 0.2));">
+        <h3 style="color: var(--gold); margin-bottom: 2rem;">🎂 Happy Birthday, My Love! 🎂</h3>
+        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+          Today and every day, you are celebrated, loved, and cherished. 
+          May your birthday be as beautiful and special as you are. 
+          Here's to another year of love, laughter, and beautiful memories together!
+        </p>
+        <div style="font-size: 2rem; margin-top: 2rem;">
+          💖 🎉 ✨ 🎂 💕 🌟
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="text-center" style="margin-top: 3rem;">
+        <a href="home.html" class="btn">Go to Home 🎈</a>
+        <a href="memories.html" class="btn" style="margin-left: 1rem;">View Memories 📸</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-text">
+        Made with 💖 for the most special person
+      </div>
+      <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="letter.html">Letter</a>
+        <a href="memories.html">Memories</a>
+        <a href="surprise.html">Surprise</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Music Player -->
+  <div class="music-player">
+    <div class="music-controls">
+      <button class="music-btn play-btn">▶️</button>
+      <button class="music-btn pause-btn" style="display: none;">⏸️</button>
+      <button class="music-btn prev-btn">⏮️</button>
+      <button class="music-btn next-btn">⏭️</button>
+    </div>
+    <div class="music-info">
+      <div class="music-title">Surprise Song</div>
+      <div class="music-artist">Magical</div>
+    </div>
+    <input type="range" class="volume-slider" min="0" max="100" value="50" style="width: 60px;">
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

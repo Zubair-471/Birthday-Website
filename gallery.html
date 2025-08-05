@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=6">
+</head>
+<body>
+  <!-- Floating Hearts -->
+  <div class="floating-hearts"></div>
+
+  <!-- Confetti -->
+  <div class="confetti"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="home.html" class="header-logo">🎂 Birthday Love 💖</a>
+      <nav class="header-nav">
+        <a href="home.html">Home</a>
+        <a href="letter.html">Letter</a>
+        <a href="memories.html">Memories</a>
+        <a href="surprise.html">Surprise</a>
+        <a href="gallery.html" class="active">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Gallery Introduction -->
+    <div class="glass-card text-center" style="max-width: 800px; margin: 2rem auto;">
+      <h2 style="color: var(--gold); margin-bottom: 1rem; font-size: clamp(1.5rem, 3.5vw, 2rem);">📸 Our Beautiful Photo Gallery 📸</h2>
+      <p style="font-size: clamp(1rem, 2.5vw, 1.2rem); margin-bottom: 1rem;">
+        Every picture tells a story of our love 💖
+      </p>
+      <p style="font-size: clamp(0.9rem, 2.2vw, 1.1rem); opacity: 0.9; margin-bottom: 1rem;">
+        Click on any photo to see it in full size and relive those precious moments together.
+      </p>
+      <p style="font-size: clamp(0.8rem, 2vw, 1rem); opacity: 0.8;">
+        These memories are the treasures of our hearts, captured in moments of joy, love, and pure happiness.
+      </p>
+    </div>
+
+    <!-- Photo Gallery Grid -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(1rem, 3vw, 2rem);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(1rem, 2.5vw, 2rem);">
+        
+        <!-- Photo 1 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Our First Date', 'The magical evening when everything began to feel special. Your smile that night still takes my breath away.', '💕')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #ff6b9d, #c44569); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            💕
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Our First Date</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">A magical evening that changed everything</p>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Coffee Together', 'That cozy coffee shop where we spent hours talking about everything and nothing. Your laugh filled the entire room.', '☕')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #f8b5d3, #ff6b9d); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            ☕
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Coffee Together</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Hours of conversation over coffee</p>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Sunset Walk', 'Walking hand in hand as the sun set, painting the sky with colors as beautiful as your smile.', '🌅')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #ffd700, #ff6b9d); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            🌅
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Sunset Walk</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Walking together as the sun sets</p>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Movie Night', 'Cuddled up watching our favorite movies, sharing popcorn and creating memories that last forever.', '🎬')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #c44569, #ff6b9d); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            🎬
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Movie Night</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Cuddled up watching movies together</p>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Cooking Together', 'Creating delicious meals together in the kitchen, laughing at our cooking adventures and enjoying the process.', '👨‍🍳')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #ff6b9d, #f8b5d3); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            👨‍🍳
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Cooking Together</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Creating delicious meals together</p>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Dance Night', 'Moving together to our favorite songs, feeling the rhythm and the love between us.', '💃')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #f8b5d3, #ffd700); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            💃
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Dance Night</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Moving together to our favorite songs</p>
+          </div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Beach Day', 'Building sandcastles and watching the waves, feeling the ocean breeze and your hand in mine.', '🏖️')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #ffd700, #f8b5d3); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            🏖️
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Beach Day</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Building sandcastles by the ocean</p>
+          </div>
+        </div>
+
+        <!-- Photo 8 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Stargazing', 'Lying under the stars, counting constellations and making wishes on shooting stars together.', '⭐')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #c44569, #ffd700); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            ⭐
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Stargazing</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Counting stars and making wishes</p>
+          </div>
+        </div>
+
+        <!-- Photo 9 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Birthday Celebration', 'Celebrating your special day with cake, candles, and all the love in the world.', '🎂')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #ff6b9d, #ffd700); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            🎂
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Birthday Celebration</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Celebrating your special day</p>
+          </div>
+        </div>
+
+        <!-- Photo 10 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Holiday Trip', 'Exploring new places together, creating memories that will last a lifetime.', '✈️')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #f8b5d3, #c44569); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            ✈️
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Holiday Trip</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Exploring new places together</p>
+          </div>
+        </div>
+
+        <!-- Photo 11 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Rainy Day', 'Cuddled up inside while it rains, listening to the sound of raindrops and your heartbeat.', '🌧️')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #ffd700, #c44569); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            🌧️
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Rainy Day</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Cuddled up during the rain</p>
+          </div>
+        </div>
+
+        <!-- Photo 12 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showPhotoModal('Anniversary', 'Celebrating another year of love, growth, and beautiful memories together.', '💍')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #ff6b9d, #f8b5d3); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            💍
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Anniversary</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Celebrating our love story</p>
+          </div>
+        </div>
+
+        <!-- Video 1 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showVideoModal('Birthday Celebration', 'A special video capturing the joy and love of your birthday celebration.', '🎥')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #ffd700, #ff6b9d); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            🎥
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Birthday Video</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Special birthday moments captured</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="glass-card" style="cursor: pointer; overflow: hidden; transition: transform 0.3s ease;" onclick="showVideoModal('Love Moments', 'Beautiful video clips of our most precious moments together.', '💕')">
+          <div style="height: clamp(200px, 40vw, 250px); background: linear-gradient(45deg, #f8b5d3, #c44569); display: flex; align-items: center; justify-content: center; font-size: clamp(2rem, 8vw, 4rem); color: #f0f0f0;">
+            💕
+          </div>
+          <div style="padding: clamp(1rem, 2.5vw, 1.5rem);">
+            <h3 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Love Moments</h3>
+            <p style="opacity: 0.8; font-size: clamp(0.8rem, 2vw, 0.9rem);">Our most precious moments</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extended Gallery Message -->
+    <div class="glass-card" style="margin-top: 3rem; text-align: center;">
+      <h3 style="color: var(--gold); margin-bottom: 2rem; font-size: clamp(1.5rem, 3.5vw, 2rem);">💕 A Message About Our Photos 💕</h3>
+      
+      <div style="line-height: 1.8; font-size: clamp(0.9rem, 2.2vw, 1.1rem);">
+        <p style="margin-bottom: 1.5rem;">
+          Each photo in this gallery represents a moment in time when our love was captured, 
+          when our hearts were connected, and when we created memories that will last forever. 
+          These images are more than just pictures - they are windows into our beautiful journey together.
+        </p>
+        
+        <p style="margin-bottom: 1.5rem;">
+          From our first date to our latest adventures, every image tells a story of growth, 
+          love, and the beautiful bond we share. They remind us of the laughter we've shared, 
+          the challenges we've overcome together, and the countless moments of pure joy.
+        </p>
+        
+        <p style="margin-bottom: 1.5rem;">
+          As you browse through these photos, remember that each one represents a chapter in 
+          our love story - a story that continues to grow more beautiful with each passing day. 
+          These memories are the foundation of our love and the promise of many more beautiful moments to come.
+        </p>
+        
+        <p style="font-weight: 600; color: var(--gold);">
+          Thank you for being the most beautiful subject in every photo, the most precious person in my life, 
+          and the love that makes every moment worth capturing. 💖
+        </p>
+      </div>
+    </div>
+
+    <!-- Extended Photo Memories -->
+    <div class="glass-card" style="margin-top: 3rem;">
+      <h3 style="color: var(--gold); text-align: center; margin-bottom: 2rem; font-size: clamp(1.5rem, 3.5vw, 2rem);">🌟 Special Photo Memories 🌟</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(1rem, 2.5vw, 2rem);">
+        <div style="text-align: center; padding: clamp(1rem, 2.5vw, 1.5rem);">
+          <div style="font-size: clamp(2rem, 6vw, 2.5rem); margin-bottom: 1rem;">💕</div>
+          <h4 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">First Moments</h4>
+          <p style="opacity: 0.9; font-size: clamp(0.8rem, 2vw, 0.9rem);">The beginning of our beautiful journey together, when every glance was filled with wonder and every touch was electric.</p>
+        </div>
+        
+        <div style="text-align: center; padding: clamp(1rem, 2.5vw, 1.5rem);">
+          <div style="font-size: clamp(2rem, 6vw, 2.5rem); margin-bottom: 1rem;">🎉</div>
+          <h4 style="font-size: clamp(1rem, 2.5vw, 1.2rem);">Celebrations</h4>
+          <p style="opacity: 0.9; font-size: clamp(0.8rem, 2vw, 0.9rem);">Birthdays, anniversaries, and special days when we celebrated our love and the beautiful person you are.</p>
+        </div>
+        
+        <div style="text-align: center; padding: 1.5rem;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🌍</div>
+          <h4>Adventures</h4>
+          <p style="opacity: 0.9;">Exploring new places together, discovering the world hand in hand, and creating memories in every corner.</p>
+        </div>
+        
+        <div style="text-align: center; padding: 1.5rem;">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏠</div>
+          <h4>Home Life</h4>
+          <p style="opacity: 0.9;">The quiet moments at home, the daily routines, and the simple joys of being together in our own space.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Buttons -->
+    <div class="text-center" style="margin-top: 2rem;">
+      <button class="btn" onclick="createSparkles()" style="margin: 0 0.5rem;">
+        Create Sparkles ✨
+      </button>
+      <button class="btn" onclick="playMusic()" style="margin: 0 0.5rem;">
+        Play Music 🎵
+      </button>
+      <button class="btn" onclick="showAllPhotos()" style="margin: 0 0.5rem;">
+        View All Photos 📸
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <div class="text-center" style="margin-top: 2rem;">
+      <a href="home.html" class="btn">Go to Home 🎈</a>
+      <a href="memories.html" class="btn" style="margin-left: 1rem;">View Memories 📸</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-text">
+        Made with 💖 for the most special person
+      </div>
+      <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="letter.html">Letter</a>
+        <a href="memories.html">Memories</a>
+        <a href="surprise.html">Surprise</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Music Player -->
+  <div class="music-player">
+    <div class="music-controls">
+      <button class="music-btn play-btn">▶️</button>
+      <button class="music-btn pause-btn" style="display: none;">⏸️</button>
+      <button class="music-btn prev-btn">⏮️</button>
+      <button class="music-btn next-btn">⏭️</button>
+    </div>
+    <div class="music-info">
+      <div class="music-title">Gallery Song</div>
+      <div class="music-artist">Beautiful</div>
+    </div>
+    <input type="range" class="volume-slider" min="0" max="100" value="50" style="width: 60px;">
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

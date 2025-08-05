@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday 💖</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading">
+    <div class="loading-heart">💖</div>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="floating-hearts"></div>
+
+  <!-- Confetti -->
+  <div class="confetti"></div>
+
+  <!-- Main Content -->
+  <div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; text-align: center; padding: 20px;">
+    <div class="glass-card" style="max-width: 700px; width: 100%;">
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1.5rem; color: white; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.4); line-height: 1.2;">
+        🎂 Happy Birthday, My Love 💖
+      </h1>
+      
+      <p style="font-size: clamp(1rem, 3vw, 1.3rem); margin-bottom: 1rem; opacity: 1; line-height: 1.5; color: white; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);">
+        Welcome to a magical digital surprise created with love just for you...
+      </p>
+      
+      <p style="font-size: clamp(0.9rem, 2.5vw, 1.1rem); margin-bottom: 2rem; opacity: 0.95; line-height: 1.5; color: white; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);">
+        Today is all about celebrating the amazing person you are! ✨
+      </p>
+
+      <!-- Countdown Timer -->
+      <div id="countdown" class="countdown" style="margin: 2rem 0;"></div>
+
+      <!-- Welcome Message -->
+      <div style="margin: 2rem 0; padding: clamp(1rem, 3vw, 1.5rem); background: rgba(255, 255, 255, 0.1); border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.2);">
+        <p style="font-size: clamp(0.9rem, 2.5vw, 1.1rem); margin-bottom: 1rem; opacity: 1; line-height: 1.5; color: white; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);">
+          "Every moment with you is a gift I cherish deeply. Your smile lights up my world like nothing else."
+        </p>
+        <p style="font-size: clamp(0.8rem, 2vw, 1rem); opacity: 0.95; line-height: 1.5; color: white; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 8px rgba(255, 255, 255, 0.3);">
+          Ready to begin your special day? 💫
+        </p>
+      </div>
+
+      <a href="home.html" class="btn" style="font-size: clamp(0.9rem, 2.5vw, 1.2rem); margin-top: 2rem; padding: clamp(12px, 3vw, 15px) clamp(25px, 6vw, 40px);" onclick="sessionStorage.setItem('fromWelcome', 'true');">
+        🎉 Let's Begin the Celebration 🎉
+      </a>
+      
+      <!-- Quick Navigation Hints -->
+      <div style="margin-top: 2rem; opacity: 0.9;">
+        <p style="font-size: clamp(0.7rem, 2vw, 0.9rem); margin-bottom: 0.5rem; color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">Explore the magic:</p>
+        <div style="display: flex; justify-content: center; gap: clamp(0.5rem, 2vw, 1rem); flex-wrap: wrap; font-size: clamp(0.6rem, 1.8vw, 0.8rem);">
+          <span style="color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">💌 Letter</span>
+          <span style="color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">📸 Memories</span>
+          <span style="color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">🎁 Surprises</span>
+          <span style="color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);">🎵 Gallery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music Player -->
+  <div class="music-player">
+    <div class="music-controls">
+      <button class="music-btn play-btn" aria-label="Play">▶️</button>
+      <button class="music-btn pause-btn" style="display: none;" aria-label="Pause">⏸️</button>
+      <button class="music-btn prev-btn" aria-label="Previous">⏮️</button>
+      <button class="music-btn next-btn" aria-label="Next">⏭️</button>
+    </div>
+    <div class="music-info">
+      <div class="music-title">Welcome Song</div>
+      <div class="music-artist">Birthday Special</div>
+    </div>
+    <input type="range" class="volume-slider" min="0" max="100" value="50" aria-label="Volume control">
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
